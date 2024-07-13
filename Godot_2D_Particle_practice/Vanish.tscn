@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://beiltkheq1143"]
+
+[sub_resource type="Curve" id="Curve_x25jx"]
+min_value = -1.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, -1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_fkwg1"]
+curve = SubResource("Curve_x25jx")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jyg8i"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 200, 0)
+hue_variation_max = 1.0
+hue_variation_curve = SubResource("CurveTexture_fkwg1")
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(539, 259)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 1
+process_material = SubResource("ParticleProcessMaterial_jyg8i")
+visibility_rect = Rect2(-1, -0.993194, 2, 52.6265)
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
+position = Vector2(10, 0)
+amount = 1
+process_material = SubResource("ParticleProcessMaterial_jyg8i")
+visibility_rect = Rect2(-1, -0.993194, 2, 52.6265)
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="."]
+position = Vector2(20, 0)
+amount = 1
+process_material = SubResource("ParticleProcessMaterial_jyg8i")
+visibility_rect = Rect2(-1, -0.993194, 2, 52.6265)
+
+[node name="GPUParticles2D4" type="GPUParticles2D" parent="."]
+position = Vector2(30, 0)
+amount = 1
+process_material = SubResource("ParticleProcessMaterial_jyg8i")
+visibility_rect = Rect2(-1, -0.993194, 2, 52.6265)
+
+[node name="GPUParticles2D5" type="GPUParticles2D" parent="."]
+position = Vector2(40, 0)
+amount = 1
+process_material = SubResource("ParticleProcessMaterial_jyg8i")
+visibility_rect = Rect2(-1, -0.993194, 2, 52.6265)
